@@ -4,13 +4,10 @@
 
 def encode(str, shift = 0)
   ascii = str.bytes
-  p str.bytes
 
   shifted = shift_ascii(ascii, shift)
-  p shifted
 
   encoded = shifted.map(&:chr)
-  p encoded
 
   encoded.reduce('') { |previous, curr| previous + curr }
 end
